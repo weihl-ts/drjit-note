@@ -608,6 +608,7 @@ void bind_ad_details(py::class_<dr::DiffArray<T>> &cls) {
     DRJIT_BIND_ARRAY_TYPES_DIM(Module, Guide, Scalar, 2)                       \
     DRJIT_BIND_ARRAY_TYPES_DIM(Module, Guide, Scalar, 3)                       \
     DRJIT_BIND_ARRAY_TYPES_DIM(Module, Guide, Scalar, 4)                       \
+    DRJIT_BIND_ARRAY_TYPES_DIM(Module, Guide, Scalar, 8)                       \
     DRJIT_BIND_ARRAY_TYPES_DYN(Module, Guide, Scalar)                          \
     bind<dr::mask_t<dr::Array<dr::Array<Guide, 2>, 2>>>(Module, Scalar);       \
     bind<dr::mask_t<dr::Array<dr::Array<Guide, 3>, 3>>>(Module, Scalar);       \
@@ -617,6 +618,7 @@ void bind_ad_details(py::class_<dr::DiffArray<T>> &cls) {
     DRJIT_BIND_MATRIX_TYPES_DIM(Module, Guide, Scalar, 2)                      \
     DRJIT_BIND_MATRIX_TYPES_DIM(Module, Guide, Scalar, 3)                      \
     DRJIT_BIND_MATRIX_TYPES_DIM(Module, Guide, Scalar, 4)                      \
+    DRJIT_BIND_MATRIX_TYPES_DIM(Module, Guide, Scalar, 8)                      \
                                                                                \
     using Guide1 = dr::Array<Guide, 1>;                                        \
     using Guide3 = dr::Array<Guide, 3>;                                        \
